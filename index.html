@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INSPIRE 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursor-trail"></div>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo-wrap">
+        <div class="loading-ring"></div>
+        <div class="loading-ring loading-ring-2"></div>
+        <img src="public/logo_(2).png" alt="INSPIRE Logo" class="loading-logo-img" />
+      </div>
+      <div class="loading-title">INSPIRE</div>
+      <div class="loading-spinner">
+        <div class="spinner-arc"></div>
+      </div>
+      <div class="loading-text">Preparing Inspiration...</div>
+    </div>
+  </div>
+
+  <!-- Background Layers -->
+  <div class="bg-layer bg-gradient"></div>
+  <canvas class="bg-layer" id="particles-canvas"></canvas>
+  <div class="bg-layer" id="embers-layer"></div>
+  <div class="bg-layer bg-fire-light"></div>
+  <div class="bg-layer bg-glow-circles"></div>
+  <div class="bg-layer bg-smoke"></div>
+  <canvas class="bg-layer" id="lines-canvas"></canvas>
+
+  <!-- Main Content -->
+  <main class="main-content" id="main-content">
+
+    <!-- Header -->
+    <header class="header">
+      <!-- HUD Rings behind logo -->
+      <div class="hud-rings">
+        <div class="hud-ring hud-ring-1"></div>
+        <div class="hud-ring hud-ring-2"></div>
+        <div class="hud-ring hud-ring-3"></div>
+        <div class="hud-dots"></div>
+      </div>
+
+      <!-- Logo -->
+      <div class="logo-wrap fade-up" data-delay="0">
+        <div class="logo-ring-outer"></div>
+        <div class="logo-ring-inner"></div>
+        <img src="public/logo_(2).png" alt="INSPIRE Logo" class="logo-img" />
+      </div>
+
+      <!-- Lens Flare -->
+      <div class="lens-flare"></div>
+
+      <!-- Mascot -->
+      <div class="mascot-wrap fade-up" data-delay="200">
+        <div class="mascot-glow"></div>
+        <img src="public/maskot.png" alt="INSPIRE Mascot" class="mascot-img" />
+        <div class="mascot-shadow"></div>
+      </div>
+    </header>
+
+    <!-- Title Section -->
+    <section class="title-section">
+      <div class="title-wrap fade-up" data-delay="300">
+        <h1 class="main-title">INSPIRE</h1>
+        <div class="title-underline"></div>
+      </div>
+      <div class="subtitle fade-up" data-delay="400">
+        <span>INSPIRING</span>
+        <span class="dot">•</span>
+        <span>INNOVATING</span>
+        <span class="dot">•</span>
+        <span>IMPACTING</span>
+      </div>
+      <p class="description fade-up" data-delay="500">
+        Empowering future innovators through collaboration, technology, creativity, and leadership.
+      </p>
+    </section>
+
+    <!-- Buttons Section -->
+    <section class="buttons-section">
+
+      <!-- Website -->
+      <a href="https://inspire-roan.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn fade-up" data-delay="600">
+        <span class="btn-icon"><i class="fas fa-globe"></i></span>
+        <span class="btn-label">Website</span>
+        <span class="btn-arrow"><i class="fas fa-chevron-right"></i></span>
+      </a>
+
+      <!-- Booklet — belum tersedia -->
+      <a href="#" target="_blank" rel="noopener noreferrer" class="btn fade-up" data-delay="680">
+        <span class="btn-icon"><i class="fas fa-book-open"></i></span>
+        <span class="btn-label">Booklet</span>
+        <span class="btn-arrow"><i class="fas fa-chevron-right"></i></span>
+      </a>
+
+      <!-- Registration — Special Button, belum tersedia -->
+      <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-registration fade-up" data-delay="760">
+        <div class="btn-fire-bg"></div>
+        <span class="btn-icon"><i class="fas fa-rocket"></i></span>
+        <span class="btn-label">Pendaftaran</span>
+        <span class="btn-arrow"><i class="fas fa-chevron-right"></i></span>
+        <div class="btn-pulse-ring"></div>
+      </a>
+
+    </section>
+
+    <!-- Bottom Credit -->
+    <div class="bottom-credit fade-up" data-delay="900">
+      <div class="credit-line"></div>
+      <p>Powered by <span>INSPIRE Committee 2026</span></p>
+      <div class="credit-line"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer fade-up" data-delay="950">
+      <p class="footer-copyright">© 2026 INSPIRE Committee. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Fire Particles at Bottom -->
+    <canvas id="fire-canvas" class="fire-canvas"></canvas>
+
+  </main>
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
